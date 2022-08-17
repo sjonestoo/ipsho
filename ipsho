@@ -1,0 +1,19 @@
+#./bin/bash
+#short script that runs a variety of connectivity tests and displays the network information
+
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+echo ${bold}Internal IP Info${normal} 
+ip r
+
+echo ${bold}External IP Info${normal}
+curl ifconfig.co
+
+echo ${bold}Pinging Level 3 Host${normal}
+ping -c 10 4.2.2.1
+
+echo ${bold}Performing Traceroute to Google${normal}
+mtr -4b -c 20 -r  google.com
+
+
