@@ -8,7 +8,7 @@ echo ${bold}Internal IP Info${normal}
 ip r
 
 echo ${bold}External IP Info${normal}
-curl ifconfig.co
+curl -4 ifconfig.co
 
 echo ${bold}Pinging Level 3 Host${normal}
 ping -c 10 4.2.2.1
