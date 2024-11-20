@@ -10,10 +10,12 @@ ip r
 echo ${bold}External IP Info${normal}
 curl -4 ifconfig.co
 
-echo ${bold}Pinging Level 3 Host${normal}
-ping -c 10 4.2.2.1
+echo ${bold}Pinging L3 Host${normal}
+ping -c 50 4.2.2.1
 
 echo ${bold}Performing Traceroute to Google${normal}
 mtr -4b -c 20 -r  google.com
 
+echo ${bold}Performing Speedtest${normal}
+speedtest
 
